@@ -1,46 +1,37 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Card = () => {
+export const Card = (props) => {
+  const {data} = props;
   return(
-    <>
-    <CCard>
-        <CIner>
-          <CImg src="https://placehold.jp/300x200.png" alt="コンテンツ1" class="img" />
-          <CDescription>
-            <CCardName>コンテンツ１</CCardName>
-            <CCardText>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </CCardText>
-          </CDescription>
-        </CIner>
-      </CCard>
-      <CCard>
-        <CIner>
-          <CImg src="https://placehold.jp/300x200.png" alt="コンテンツ2" class="img" />
-          <CDescription>
-            <CCardName>コンテンツ２</CCardName>
-            <CCardText>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </CCardText>
-          </CDescription>
-        </CIner>
-      </CCard>
-      <CCard>
-        <CIner>
-          <CImg src="https://placehold.jp/300x200.png" alt="コンテンツ3" class="img" />
-          <CDescription>
-            <CCardName>コンテンツ３</CCardName>
-            <CCardText>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </CCardText>
-          </CDescription>
-        </CIner>
-      </CCard>
-    </>
+    <LApp>
+      {data.map((item, index) => {
+        return(
+          <CCard key={index}>
+            <CIner>
+              <CImg src={item.imagePath} alt={item.title} className="img" />
+              <CDescription>
+                <CCardName>{item.title}</CCardName>
+                <CCardText>
+                  {item.description}
+                </CCardText>
+              </CDescription>
+            </CIner>
+          </CCard>
+        );
+      })}
+    </LApp>
   );
 };
 
+const LApp = styled.div`
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+`;
 const CCard = styled.div`
   border: 2px solid #333;
   border-radius: 5px;

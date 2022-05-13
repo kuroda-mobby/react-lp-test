@@ -1,24 +1,12 @@
-import styled from "styled-components";
+import React from "react";
 import { Card } from "./Card";
+import data from "./data.json";
 
 function App() {
   return (
-    <LApp>
-      <Card />
-      
-    </LApp>
-    
+    <Card data={data} />
   );
 }
 
 export default App;
 
-
-const LApp = styled.div`
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: 0 auto;
-  justify-content: space-between;
-`;
