@@ -5,35 +5,35 @@ function App() {
     <LApp>
       <CCard>
         <CIner>
-          <img src="https://placehold.jp/300x200.png" class="img" />
-          <div class="description">
+          <CImg src="https://placehold.jp/300x200.png" alt="コンテンツ1" class="img" />
+          <CDescription>
             <CCardName>コンテンツ１</CCardName>
             <CCardText>
               テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
             </CCardText>
-          </div>
+          </CDescription>
         </CIner>
       </CCard>
       <CCard>
         <CIner>
-          <img src="https://placehold.jp/300x200.png" class="img" />
-          <div class="description">
+          <CImg src="https://placehold.jp/300x200.png" alt="コンテンツ2" class="img" />
+          <CDescription>
             <CCardName>コンテンツ２</CCardName>
             <CCardText>
               テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
             </CCardText>
-          </div>
+          </CDescription>
         </CIner>
       </CCard>
       <CCard>
         <CIner>
-          <img src="https://placehold.jp/300x200.png" class="img" />
-          <div class="description">
+          <CImg src="https://placehold.jp/300x200.png" alt="コンテンツ3" class="img" />
+          <CDescription>
             <CCardName>コンテンツ３</CCardName>
             <CCardText>
               テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
             </CCardText>
-          </div>
+          </CDescription>
         </CIner>
       </CCard>
       
@@ -62,8 +62,9 @@ const CCard = styled.div`
 const CIner = styled.div`
   padding: 20px;
 `;
-const CImage = styled.img`
-
+const CImg = styled.img`
+  max-width: 300px;
+  width: 100%;
 `;
 const CDescription = styled.div`
 
